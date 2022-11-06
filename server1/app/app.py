@@ -1,14 +1,11 @@
 from flask import Flask, request
 
-
 app = Flask(__name__)
 PORT = 5001
 HOST = 'localhost'
 
-
 def fact(n):
     return 1 if (n == 1 or n == 0) else n * fact(n - 1)
-
 
 @app.route('/')
 def server1():

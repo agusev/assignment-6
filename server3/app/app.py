@@ -10,11 +10,13 @@ def square(n):
 @app.route('/')
 def server3():
     number = int(request.data)
+    res = ""
 
     for i in range(number):
         n = square(int(i) + 1)
         print(f'server3_1 | Server three calculated {i+1}^2 = {n}')
-    return str(number)
+        res += f'server3_1 | Server three calculated {i+1}^2 = {n}\n'
+    return res
 
 
 if __name__ == '__main__':

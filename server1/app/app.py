@@ -12,7 +12,7 @@ def server1():
     number = int(request.data)
     ret = fact(number)
     print(f'server1_1 | Server one calculated {number}! = {ret}')
-    return f'<h1>{str(ret)}</h1>'
+    return f'server1_1 | Server one calculated {number}! = {ret}'
 
 
 if __name__ == '__main__':

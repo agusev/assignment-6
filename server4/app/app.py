@@ -13,7 +13,7 @@ def server4():
     rev = int(request.data)
     ret = reverseS(rev)
     print(f'server4_1 | Server four calculated reverse({rev}) = {str(ret)}')
-    return str(ret)
+    return f'server4_1 | Server four calculated reverse({rev}) = {str(ret)}'
 
 
 if __name__ == '__main__':

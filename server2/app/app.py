@@ -1,8 +1,7 @@
 from flask import Flask, request
 
 app = Flask(__name__)
-PORT = 5002
-HOST = 'localhost'
+
 
 def fib(n):
     a = 0
@@ -23,6 +22,7 @@ def fib(n):
             b = c
         return b
 
+
 @app.route('/')
 def server2():
     number = int(request.data)
@@ -30,6 +30,7 @@ def server2():
     print(f'server2_1 | Server two calculated fib({number}) = {ret}')
     return str(ret)
 
+
 if __name__ == '__main__':
     print("Starting new_hw6_server2_1 ... done")
-    app.run(host=HOST, port=PORT)
+    app.run(host='0.0.0.0', debug=True)
